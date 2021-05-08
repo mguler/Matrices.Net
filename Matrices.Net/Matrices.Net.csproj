@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Impl\Factory\**" />
+    <Compile Remove="Impl\Inversion\**" />
+    <Compile Remove="Impl\Normalization\**" />
+    <Compile Remove="Impl\Operators\**" />
+    <Compile Remove="Impl\Serialization\**" />
+    <Compile Remove="Impl\Transpoze\**" />
+    <EmbeddedResource Remove="Impl\Factory\**" />
+    <EmbeddedResource Remove="Impl\Inversion\**" />
+    <EmbeddedResource Remove="Impl\Normalization\**" />
+    <EmbeddedResource Remove="Impl\Operators\**" />
+    <EmbeddedResource Remove="Impl\Serialization\**" />
+    <EmbeddedResource Remove="Impl\Transpoze\**" />
+    <None Remove="Impl\Factory\**" />
+    <None Remove="Impl\Inversion\**" />
+    <None Remove="Impl\Normalization\**" />
+    <None Remove="Impl\Operators\**" />
+    <None Remove="Impl\Serialization\**" />
+    <None Remove="Impl\Transpoze\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Impl\Matrix.js" />
+    <None Remove="Impl\Matrix.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Impl\Factory\MatrixFactoryDefaultImpl.cs" />
+    <Compile Include="Impl\Inversion\MatrixInversionBareissImpl.cs" />
+    <Compile Include="Impl\Normalization\MatrixNormalizationDefaultImpl.cs" />
+    <Compile Include="Impl\Normalization\MatrixNormalizationZScoreImpl.cs" />
+    <Compile Include="Impl\Operators\MatrixMultiplyOperator.cs" />
+    <Compile Include="Impl\Operators\MatrixSubtractOperator.cs" />
+    <Compile Include="Impl\Operators\MatrixSumOperator.cs" />
+    <Compile Include="Impl\Serialization\MatrixSerializerDefaultImpl.cs" />
+    <Compile Include="Impl\Transpoze\MatrixTranspozeDefaultImpl.cs" />
+  </ItemGroup>
+
+</Project>
